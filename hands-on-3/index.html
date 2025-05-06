@@ -19,40 +19,42 @@
         }
     
         header {
-        color:  gray;
-        text-align: center;
-        display: flex;
-        align-items: center; /* 縦方向の中央揃え */
+            text-align: center; /* テキストを中央揃え */
+            display: flex;  /* 横並びに変更 */
+            align-items: center; /* 縦方向の中央揃え */
             justify-content: center; /* 横方向の中央揃え */
-            padding: 5px;
+            padding: 5px; /* 上下の余白を指定 */
         }
 
         header .icon {
-        width: 50px;
-        height: 50px;
-        background-image: url('./logo-150.png');
-        background-size: contain;
-        background-repeat: no-repeat;
+            width: 50px; /* 幅を指定 */
+            height: 50px; /* 高さを指定 */
+            background-image: url('./logo-150.png'); /* アイコン画像を指定 */
+            background-size: contain; /* 画像を要素に合わせて拡大縮小 */
+            background-repeat: no-repeat; /* 画像を繰り返さない */
         }
 
+        /* バナー上の文字をきれいに映すためのおまじないです。 */
+        /* 画像と文字のみ変更してください */
         .banner {
-            position: relative;
-            color: #fff;
-            text-align: left;
-            height: 200px;
-            display: flex;
+            position: relative; /* 相対位置に配置 */
+            color: #fff; /* 文字色を白に */
+            text-align: left; /* テキストを左揃え */
+            height: 200px; /* バナーの高さを指定 */
+            display: flex; /* フレックスボックスを使用 */
             align-items: center; /* 縦方向の中央揃え */
-            padding: 20px;
+            padding: 20px; /* 内側の余白を指定 */
         }
 
         .banner::before {
-            content: '';
+            content: ''; 
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('./header.png');
+            /* urlの後だけ好きに変える */
+            background-image: url('./header.png'); /* バナー画像を指定 */
             background-size: cover;
             background-position: center;
             filter: brightness(0.6); /* 画像の明度を下げる */
@@ -73,12 +75,11 @@
             display: flex;
       
         }
-
-        .container img {
-           
-            margin: 20px; /* 画像の周りに余白を追加 */
         
+        .container img {          
+            margin: 20px; /* 画像の周りに余白を追加 */
         }
+
         h1, h2, h3 {
             color: orange; /* 見出しの文字色を変更 */
         }
@@ -113,17 +114,18 @@
 </head>
 
 <body>
+    <!-- ヘッダーです。余裕があれば変えてもらってOKです。 -->
     <header>
         <p class="icon"></p>
         <h1>GitHubPages勉強会</h1>
     </header>
-
+    <!-- バナー画像です。cssから画像を変えれます -->
     <div class="banner">
         <h1> ここにページのタイトル</h1>
     </div>
+    <!-- ここにHTMLを記述していきます、テンプレートをコピーアンドペーストして使ってください -->
     <div class="container">
-        
-        <!-- ここにHTMLを記述していきます、テンプレートをコピーアンドペーストして使ってください -->
+         <!-- 画像をの横に文字を配置するため、contentの中に記述 -->
         <div class="content">
             <p>以下テンプレートです。HTMLとCSSを使って自由に書いてみてください。</p>
 
@@ -134,6 +136,7 @@
             <a href="https://www.google.com">リンク</a>
             <p>一部を<strong>太字</strong>に</p>
 
+            <!-- listの中にもう一度ulとリストで入れ子-->
             <ul>
                 <li>リスト１</li>
                 <li>
@@ -149,6 +152,7 @@
         <img src="./picture.png">
      </div>
     </div>
+    <!-- 以下フッターなので変えなくても良い -->
     <footer>
         <p>&copy; 2025 GitHubPages勉強会.</p>
     </footer>
