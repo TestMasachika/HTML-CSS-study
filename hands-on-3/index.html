@@ -16,15 +16,68 @@
         body {
             font-family: Arial, sans-serif; /* フォントを変更 */
             font-size: 16px; /* フォントサイズを変更 */
-            background-color: blue; /* 背景色を変更 */
+        }
+    
+        header {
+        color:  gray;
+        text-align: center;
+        display: flex;
+        align-items: center; /* 縦方向の中央揃え */
+            justify-content: center; /* 横方向の中央揃え */
+            padding: 5px;
+        }
+
+        header .icon {
+        width: 50px;
+        height: 50px;
+        background-image: url('./logo-150.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        }
+
+        .banner {
+            position: relative;
+            color: #fff;
+            text-align: left;
+            height: 200px;
+            display: flex;
+            align-items: center; /* 縦方向の中央揃え */
+            padding: 20px;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./header.png');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.6); /* 画像の明度を下げる */
+            z-index: 1; /* 背景として配置 */
+        }
+
+        .banner h1 {
+            position: relative;
+            z-index: 2; /* 文字を前面に配置 */
+            margin: 0;
         }
         .container {
-            width: 800px;   /* 幅を800pxに */
-            margin: 20px auto;  /* "外側"の余白を上下20px、左右を中央寄せ(auto)に設定 */
-            padding: 20px;  /* "内側"の余白を20px空けましょう */
-            background-color: aquamarine;/* 背景色を変更しましょう(色は任意です) */
-            border-radius: 8px;   /* 要素の4つ角を8px分だけ丸く */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 要素の縁に薄い影を設定 */
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #f1f1f1; /* 背景色を変更 */
+            display: flex;
+      
+        }
+
+        .container img {
+           
+            margin: 20px; /* 画像の周りに余白を追加 */
+        
         }
         h1, h2, h3 {
             color: orange; /* 見出しの文字色を変更 */
@@ -42,36 +95,63 @@
         li li{
             list-style: square; /* 入れ子のリストマーカーを四角に設定 */
         }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 0.875rem;
+        }
     </style>
 
 </head>
 
 <body>
-    <div class="container">
-        <!-- ここにHTMLを記述していきます、テンプレートをコピーアンドペーストして使ってください -->
-        <p>以下テンプレートです。HTMLとCSSを使って自由に書いてみてください。</p>
+    <header>
+        <p class="icon"></p>
+        <h1>GitHubPages勉強会</h1>
+    </header>
 
-        <h1>見出し1</h1>
-        <h2>見出し2</h2>
-        <h3>見出し3</h3>
-        <p>段落</p>
-        <a href="https://www.google.com">リンク</a>
-        <p>一部を<strong>太字</strong>に</p>
-
-        <ul>
-            <li>リスト１</li>
-            <li>
-              リスト2
-              <ul>
-                <li>ネスト1</li>
-                <li>ネスト2</li>
-              </ul>
-            </li>
-          </ul>
-          
-        <img src="./picture.png">
-       
+    <div class="banner">
+        <h1> ここにページのタイトル</h1>
     </div>
+    <div class="container">
+        
+        <!-- ここにHTMLを記述していきます、テンプレートをコピーアンドペーストして使ってください -->
+        <div class="content">
+            <p>以下テンプレートです。HTMLとCSSを使って自由に書いてみてください。</p>
+
+            <h1>見出し1</h1>
+            <h2>見出し2</h2>
+            <h3>見出し3</h3>
+            <p>段落</p>
+            <a href="https://www.google.com">リンク</a>
+            <p>一部を<strong>太字</strong>に</p>
+
+            <ul>
+                <li>リスト１</li>
+                <li>
+                リスト2
+                <ul>
+                    <li>ネスト1</li>
+                    <li>ネスト2</li>
+                </ul>
+                </li>
+            </ul>
+
+        </div>
+        <img src="./picture.png">
+     </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 GitHubPages勉強会.</p>
+    </footer>
 </body>
 
 </html>
