@@ -13,33 +13,64 @@
             margin: 0;
             padding: 0;
         }
+        body {
+            font-family: Arial, sans-serif; /* フォントを変更 */
+            font-size: 16px; /* フォントサイズを変更 */
+            background-color: blue; /* 背景色を変更 */
+        }
+        .container {
+            width: 800px;   /* 幅を800pxに */
+            margin: 20px auto;  /* "外側"の余白を上下20px、左右を中央寄せ(auto)に設定 */
+            padding: 20px;  /* "内側"の余白を20px空けましょう */
+            background-color: aquamarine;/* 背景色を変更しましょう(色は任意です) */
+            border-radius: 8px;   /* 要素の4つ角を8px分だけ丸く */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 要素の縁に薄い影を設定 */
+        }
+        h1, h2, h3 {
+            color: orange; /* 見出しの文字色を変更 */
+        }
+
+        ul, ol {
+            /* リセットCSSによってデフォルトのスタイルが消えているので、再設定 */
+            margin-left: 20px; /* リスト全体のインデントを設定 */
+            padding-left: 20px; /* マーカーとテキストの間の余白を調整 */
+        }
+
+        li{
+            list-style: circle; /* リストマーカーを丸に設定 */
+        }
+        li li{
+            list-style: square; /* 入れ子のリストマーカーを四角に設定 */
+        }
     </style>
 
 </head>
 
 <body>
     <div class="container">
-        
-        <h1>Welcome to HTML and CSS</h1>
-        <p>HTML（HyperText Markup Language）はウェブページを構築するための基本的な言語です。</p>
-        <p>CSS（Cascading Style Sheet）はHTMLと組み合わせて使用することで、Webサイトの色やサイズ、<br>レイアウトなどのデザインを定義するための言語です。</p>
-        <img src="./picture.png">
+        <!-- ここにHTMLを記述していきます、テンプレートをコピーアンドペーストして使ってください -->
+        <p>以下テンプレートです。HTMLとCSSを使って自由に書いてみてください。</p>
 
-        <h2>What You Will Learn</h2>
-        <p>この勉強会では、以下のような内容を勉強します。</p>
+        <h1>見出し1</h1>
+        <h2>見出し2</h2>
+        <h3>見出し3</h3>
+        <p>段落</p>
+        <a href="https://www.google.com">リンク</a>
+        <p>一部を<strong>太字</strong>に</p>
+
         <ul>
-            <li>HTMLの基本構造</li>
-            <li>タグと要素の使い方</li>
-            <li>デベロッパーツールの使い方</li>
-            <li>CSSの基本構造 (new!!)</li>
-        </ul>
-
-        <h3>Get Ready to Dive into HTML and CSS!</h3>
-        <p>このハンズオンセッションでは、実際にコードを書いてみましょう。</p>
-        <p>
-            理解が深まったら、ヒント以外の箇所もご自由に書き加えてもらってOKです!<br>
-            (画像を増やしたり、あえて右寄せにしてみたり...)
-        </p>
+            <li>リスト１</li>
+            <li>
+              リスト2
+              <ul>
+                <li>ネスト1</li>
+                <li>ネスト2</li>
+              </ul>
+            </li>
+          </ul>
+          
+        <img src="./picture.png">
+       
     </div>
 </body>
 
